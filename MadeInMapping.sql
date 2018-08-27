@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `MadeInMapping`;
+CREATE TABLE `MadeInMapping` (
+	`MadeInID` INT NOT NULL AUTO_INCREMENT,
+	`MadeInCN` NVARCHAR(15) NOT NULL ,
+	`MadeInEN` VARCHAR(25) NOT NULL ,
+	`InUser` VARCHAR(15) NOT NULL DEFAULT 'sys',
+	`InDate` TIMESTAMP NOT NULL DEFAULT current_timestamp,
+	`LastEditUser` VARCHAR(15) NOT NULL DEFAULT 'sys',
+	`LastEditDate` TIMESTAMP NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+	PRIMARY KEY (`MadeInID`)
+) ENGINE = INNODB DEFAULT CHAR SET = UTF8;

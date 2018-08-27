@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `ItemSeries`;
+CREATE TABLE `ItemSeries` (
+	`SeriesID` INT NOT NULL AUTO_INCREMENT,
+	`ItemSeriesCN` VARCHAR(15) NOT NULL ,
+	`ItemSeriesEN` VARCHAR(25) NOT NULL ,
+	`InUser` VARCHAR(15) NOT NULL DEFAULT 'sys',
+	`InDate` TIMESTAMP NOT NULL DEFAULT current_timestamp,
+	`LastEditUser` VARCHAR(15) NOT NULL DEFAULT 'sys',
+	`LastEditDate` TIMESTAMP NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+	PRIMARY KEY (`SeriesID`)
+) ENGINE = INNODB DEFAULT CHAR SET = UTF8;

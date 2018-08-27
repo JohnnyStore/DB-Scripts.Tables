@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `SizeMapping`;
+CREATE TABLE `SizeMapping` (
+	`SizeID` INT NOT NULL AUTO_INCREMENT,
+	`SizeCN` NVARCHAR(15) NOT NULL ,
+	`SizeEN` VARCHAR(25) NOT NULL ,
+	`InUser` VARCHAR(15) NOT NULL DEFAULT 'sys',
+	`InDate` TIMESTAMP NOT NULL DEFAULT current_timestamp,
+	`LastEditUser` VARCHAR(15) NOT NULL DEFAULT 'sys',
+	`LastEditDate` TIMESTAMP NOT NULL DEFAULT current_timestamp ON UPDATE current_timestamp,
+	PRIMARY KEY (`SizeID`)
+) ENGINE = INNODB DEFAULT CHAR SET = UTF8;
